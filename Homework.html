@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <style>
+        /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+        .albums {}
+
+        .albumCover {}
+
+        .albumTitle {}
+
+        .singerGroup {}
+
+        .jumbotron-image {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">My Shitty Music Site</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FavAlbums">Favorite Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#albumReview">Album Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#albumGallery">Album Gallery</a>
+                    </li>
+                </ul>
+        </nav>
+
+        <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+        <h1 id="FavAlbums" class="mt-5">My Favorite Albums</h1>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/91jVWIAExUL._SL1500_.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="mt-0">Appeal to Reason</h3>
+                        <h5 class="mt-0">Album by Rise Against</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://img.discogs.com/geGsZKBYp3Y373PD3n9Jc407zSg=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11976848-1525864150-4819.jpeg.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Chaxsthexry</h3>
+                        <h5>Album by Scarlxrd</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71-G9C36s2L._SL1500_.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="mt-0">Come Over When You'Re Sober,Pt.1 & Pt.2</h3>
+                        <h5 class="mt-0">Album by Lil Peep</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/91duom08xrL._SL1500_.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="mt-0">17</h3>
+                        <h5 class="mt-0">Album by XXXTentacion</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EXERCISE 4
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+        <h1 id="albumReview" class="mt-5">Album Review</h1>
+        <div class="jumbotron text-white jumbotron-image shadow"
+            style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/91jVWIAExUL._SL1500_.jpg);">
+            <h1 class="mb-4">Appeal to Reason</h1>
+            <h3 class="mb-4">by Rise Against</h3>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Lenght
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        48:23 Minutes
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Genre
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Melodic hardcore, Punk rock
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Tracklist
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="tracklist" style="display:block;border-spacing:0px">
+                            <tbody>
+                                <tr>
+                                    <th class="tlheader" scope="col"
+                                        style="width:2em;padding-left:10px;padding-right:10px;text-align:right;background-color:#eee">
+                                        <abbr title="Number">No.</abbr></th>
+                                    <th class="tlheader" scope="col"
+                                        style="width:100%;text-align:left;background-color:#eee">Title</th>
+                                    <th class="tlheader" scope="col"
+                                        style="width:4em;padding-right:10px;text-align:right;background-color:#eee">
+                                        Length</th>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">1.</td>
+                                    <td style="vertical-align:top">"Collapse (Post-Amerika)"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:19</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">2.</td>
+                                    <td style="vertical-align:top">"Long Forgotten Sons"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:01</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3.</td>
+                                    <td style="vertical-align:top">"<a
+                                            href="https://en.wikipedia.org/wiki/Re-Education_(Through_Labor)"
+                                            title="Re-Education (Through Labor)">Re-Education (Through Labor)</a>"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:42</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4.</td>
+                                    <td style="vertical-align:top">"The Dirt Whispered"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:09</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">5.</td>
+                                    <td style="vertical-align:top">"Kotov Syndrome"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:05</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">6.</td>
+                                    <td style="vertical-align:top">"From Heads Unworthy"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:42</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">7.</td>
+                                    <td style="vertical-align:top">"The Strength to Go On"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:27</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">8.</td>
+                                    <td style="vertical-align:top">"<a
+                                            href="https://en.wikipedia.org/wiki/Audience_of_One_(song)"
+                                            class="mw-redirect" title="Audience of One (Rise Against song)">Audience of
+                                            One</a>"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:05</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">9.</td>
+                                    <td style="vertical-align:top">"Entertainment"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">3:34</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">10.</td>
+                                    <td style="vertical-align:top">"<a href="https://en.wikipedia.org/wiki/Hero_of_War"
+                                            title="Hero of War">Hero
+                                            of War</a>"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:13</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">11.</td>
+                                    <td style="vertical-align:top">"<a
+                                            href="https://en.wikipedia.org/wiki/Savior_(Rise_Against_song)"
+                                            title="Savior (Rise Against song)">Savior</a>"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:02</td>
+                                </tr>
+                                <tr style="background-color:#f7f7f7">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">12.</td>
+                                    <td style="vertical-align:top">"Hairline Fracture"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:02</td>
+                                </tr>
+                                <tr style="background-color:#fff">
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">13.</td>
+                                    <td style="vertical-align:top">"Whereabouts Unknown"</td>
+                                    <td style="padding-right:10px;text-align:right;vertical-align:top">4:02</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding:0"><span
+                                            style="width:7.5em;float:right;padding-left:10px;background-color:#eee;margin-right:2px"><b>Total
+                                                length:</b></span></td>
+                                    <td style="padding:0 10px 0 0;text-align:right;background-color:#eee"><b>48:23</b>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+        <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+        <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+        <h1 id="albumGallery" class="mt-5">Album Gallery</h1>
+        <div class="row text-center text-lg-left">
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#albumGallery" class="d-block mb-4 h-100">
+                    <img class="img-fluid" src="https://cdn.all4band.com/elements/works/work-103o.jpeg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXTRA:
+         EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+    <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
